@@ -5,19 +5,19 @@ import Logo from "@components/Logo"
 export default function PublicNav() {
   const { user } = useAuth()
   return (
-    <header className="nav">
+    <header className="nav nav--public">
       <Link to="/" className="brand">
         <Logo />
       </Link>
 
-      <nav className="public-links">
+      <nav className="nav__links nav__links--public">
         <NavLink to="/features">Features</NavLink>
         <NavLink to="/services">Services</NavLink>
         <NavLink to="/pricing">Pricing</NavLink>
         <NavLink to="/about">About</NavLink>
       </nav>
 
-      <div style={{marginLeft:"auto", display:"flex", gap:8}}>
+      <div className="nav__actions nav__actions--public">
         {!user ? (
           <Link to="/login" className="btn" target="_blank" rel="noopener noreferrer">
             Login

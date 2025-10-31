@@ -11,23 +11,26 @@ export default function StaffShell() {
     <div>
       <nav className="nav">
         <Logo />
-        <NavLink to="/app" end className={({ isActive }) => (isActive ? 'active' : '')}>
-          Dashboard
-        </NavLink>
-        <NavLink to="/app/customers" className={({ isActive }) => (isActive ? 'active' : '')}>
-          Customers
-        </NavLink>
-        <NavLink to="/app/inventory" className={({ isActive }) => (isActive ? 'active' : '')}>
-          Inventory
-        </NavLink>
-        <NavLink to="/app/settings" className={({ isActive }) => (isActive ? 'active' : '')}>
-          Settings
-        </NavLink>
-        <NavLink to="/staff/setup" className={({ isActive }) => (isActive ? 'active' : '')}>
-          Company Setup
-        </NavLink>
-        <div style={{ flex: 1 }} />
-        {user ? <UserMenu /> : <NavLink to="/login" className="btn secondary">Login</NavLink>}
+        <div className="nav__links">
+          <NavLink to="/app" end className={({ isActive }) => (isActive ? 'active' : '')}>
+            Dashboard
+          </NavLink>
+          <NavLink to="/app/customers" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Customers
+          </NavLink>
+          <NavLink to="/app/inventory" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Inventory
+          </NavLink>
+          <NavLink to="/app/settings" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Settings
+          </NavLink>
+          <NavLink to="/staff/setup" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Company Setup
+          </NavLink>
+        </div>
+        <div className="nav__actions">
+          {user ? <UserMenu /> : <NavLink to="/login" className="btn secondary">Login</NavLink>}
+        </div>
       </nav>
       <div className="container">
         <Outlet />
