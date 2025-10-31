@@ -8,6 +8,31 @@ export default function Pricing(){
     {name:"Team", price:"$99", blurb:"Growing crews", features:["Up to 8 users","Routes & reporting","Stripe payments"], cta:"Choose Team", highlight:true},
     {name:"Business", price:"$199", blurb:"Multi-location", features:["Unlimited users","Advanced roles","Priority support"], cta:"Contact sales"},
   ]
+
+  const faqs = [
+    {
+      q: "Do I need to sign a long-term contract?",
+      a: "No. Plans are billed month-to-month. Upgrade, downgrade, or cancel whenever you’d like.",
+    },
+    {
+      q: "Is there a setup fee?",
+      a: "Setup is free. Our onboarding team will migrate your customers and help you build templates at no extra cost.",
+    },
+    {
+      q: "Can I connect Stripe or my existing payment processor?",
+      a: "Yes. The Pool Bud integrates with Stripe out of the box. We can also help you bridge into your preferred tools through our API.",
+    },
+    {
+      q: "Do you support larger teams?",
+      a: "Absolutely. The Business plan scales to unlimited users and includes a dedicated success manager.",
+    },
+  ]
+
+  const pricingImage = {
+    src: "https://images.unsplash.com/photo-1469815461205-4f5d29c45b81?auto=format&fit=crop&w=900&q=80",
+    alt: "Pool service team preparing equipment beside a pool.",
+  }
+
   return (
     <div>
       <PublicNav />
@@ -27,6 +52,38 @@ export default function Pricing(){
           ))}
         </div>
       </section>
+
+      <section className="container section">
+        <div className="pricing-highlight">
+          <div className="pricing-highlight__media">
+            <img src={pricingImage.src} alt={pricingImage.alt} loading="lazy" />
+          </div>
+          <div className="pricing-highlight__copy">
+            <h2>Grow without worrying about admin work</h2>
+            <p className="muted">
+              From the first pool you service to your hundredth account, The Pool Bud follows your pace. Add new technicians, open another branch, or launch specialty services—pricing adjusts as you expand.
+            </p>
+            <ul className="pricing-highlight__list">
+              <li>Unlimited customer records with every plan</li>
+              <li>Role-based access so the right people see the right data</li>
+              <li>Automatic scaling for storage, photos, and chemistry logs</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="container section">
+        <h2>Pricing FAQs</h2>
+        <div className="faq-grid">
+          {faqs.map((item, index) => (
+            <article key={index} className="faq-card">
+              <h3>{item.q}</h3>
+              <p className="muted">{item.a}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <PublicFooter />
     </div>
   )
