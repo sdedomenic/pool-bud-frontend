@@ -29,8 +29,8 @@ export default function Pricing(){
   ]
 
   const pricingImage = {
-    src: "https://images.unsplash.com/photo-1469815461205-4f5d29c45b81?auto=format&fit=crop&w=900&q=80",
-    alt: "Pool service team preparing equipment beside a pool.",
+    src: "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=900&q=80",
+    alt: "Evening view of a resort-style swimming pool maintained to perfection.",
   }
 
   return (

@@ -23,14 +23,14 @@ export default function Features(){
 
   const featureImages = [
     {
-      src: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
-      alt: "Technician testing pool water chemistry on-site.",
-      caption: "Log chemistry in seconds with structured fields tailored to pool care.",
+      src: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80",
+      alt: "Sparkling backyard swimming pool maintained by a professional crew.",
+      caption: "Deliver that crystal-clear finish every customer expects.",
     },
     {
-      src: "https://images.unsplash.com/photo-1542718618-2806d1b84272?auto=format&fit=crop&w=800&q=80",
-      alt: "Team collaborating over pool maintenance schedule.",
-      caption: "Coordinate routes and assignments with a drag-and-drop scheduler.",
+      src: "https://images.unsplash.com/photo-1551892589-865f69869476?auto=format&fit=crop&w=900&q=80",
+      alt: "Luxury hotel pool with lighting ready for evening guests.",
+      caption: "Keep high-end properties looking flawless with consistent documentation.",
     },
   ]
 
